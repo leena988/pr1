@@ -8,25 +8,36 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-    appBar:
-     AppBar( 
-       title: const Text('Blood Bank  ',
-        style: TextStyle(fontSize: 30,color: Colors.white, fontWeight: FontWeight.w700),),
-        backgroundColor: const Color(0xFFAE0E03),
-        centerTitle: true,
-        
-        
+    return Scaffold(
+    body:  Container(
+      height: double.infinity,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors:[
+          Color(0xffB81736),
+          Color(0xff281537),
+          ]
+        )
+      ),
+      child: Padding( 
+        padding: EdgeInsets.only(top: 60.0, left: 22),
+        child: Text('Hello\n Sign in !  ', style: TextStyle(
+          fontSize: 30,
+          color: Colors.white,
+          fontWeight: FontWeight.bold
+        ),
+        ) ,
+    ),
+   
   ),
-
-
- floatingActionButton: const FloatingActionButton(onPressed: null,
-    backgroundColor: Color(0xFFAE0E03),
-    child: Text("+",style: TextStyle(color: Colors.white , fontSize: 30),
-    ),
-    ),
-  );
+    Padding(
+      padding: EdgeInsets.only(8.0),
+      child: Container(color: Colors.white,
+      height: 400,
+      width: double.infinity,
+      ), ,)
   
-  
+    );
   }
 }
