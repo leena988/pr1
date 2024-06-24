@@ -9,35 +9,37 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body:  Container(
-      height: double.infinity,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors:[
-          Color(0xffB81736),
-          Color(0xff281537),
-          ]
-        )
-      ),
-      child: Padding( 
-        padding: EdgeInsets.only(top: 60.0, left: 22),
-        child: Text('Hello\n Sign in !  ', style: TextStyle(
-          fontSize: 30,
-          color: Colors.white,
-          fontWeight: FontWeight.bold
+    body:  SingleChildScrollView(
+      child: Padding(padding: EdgeInsets.all(8),
+      child: Column(children: [Text('تبرع بالدم وأنقذ حياة   ', 
+        style: TextStyle(
+        fontSize: 80,   color:  Color(0xFFAE0E03), fontWeight: FontWeight.bold,),
+          ),
+
+SizedBox(width: 100, height: 80,    child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
+                   backgroundColor :Color(0xFFAE0E03), 
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, 
+                    ),
+                  ),child: Text('تسجيل الدخول', style: TextStyle(fontSize: 19,color: Colors.white,),),  ),
+),
+SizedBox(height:30 , width: 20,),
+
+SizedBox(width:  100, height: 80, child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
+                    
+                   backgroundColor :Color(0xFFAE0E03), 
+shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, 
+                    ),),
+child: Text('إنشاء حساب', style: TextStyle(fontSize: 20,color: Colors.white,) , ),),
+       ), ], 
+),
+          ),
         ),
-        ) ,
-    ),
-   
-  ),
-    Padding(
-      padding: EdgeInsets.only(8.0),
-      child: Container(color: Colors.white,
-      height: 400,
-      width: double.infinity,
-      ), ,)
-  
-    );
+
+     
+
+);
   }
+
 }
